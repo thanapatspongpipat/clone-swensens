@@ -1,0 +1,210 @@
+<div class="content-login">
+  <div class="box-header">
+    <div class="content">
+      <h2>Register</h2>
+      <p>Register to start your sweet journey</p>
+    </div>
+  </div>
+  <form
+    class="form-horizontal form-login"
+    (ngSubmit)="RegisterForm.valid && submit()"
+    [formGroup]="RegisterForm"
+  >
+    <div class="row">
+      <div class="col-lg-6 mx-auto">
+        <div class="form-group input-login">
+          <label class="form-control-label pb-1" for="Name">First Name</label>
+          <input
+            class="form-control form-control-lg"
+            required
+            id="Name"
+            formControlName="firstname"
+            type="text"
+            placeholder="First Name"
+          />
+          <!-- <span
+            class="invalid-form"
+          >
+            <small
+              class="form-text text-muted danger"
+              >This field is required!</small
+            >
+          </span> -->
+        </div>
+      </div>
+      <div class="col-lg-6 mx-auto">
+        <div class="form-group input-login">
+          <label class="form-control-label pb-1" for="Surname">Last Name</label>
+          <input
+            class="form-control form-control-lg"
+            required
+            id="lastname"
+            formControlName="lastname"
+            type="text"
+            placeholder="Last Name"
+          />
+          <!-- <span *ngIf="TDSimpleForm.submitted" class="invalid-form">
+            <small class="form-text text-muted danger" *ngIf="!TDEmailRef.valid"
+              >email must be valid!</small
+            >
+          </span> -->
+        </div>
+      </div>
+      <div class="col-lg-12 mx-auto">
+        <div class="form-group input-login">
+          <label class="form-control-label pb-1" for="Phone"
+            >Mobile Number</label
+          >
+          <input
+            class="form-control form-control-lg"
+            ngModel
+            required
+            id="phone"
+            formControlName="phone"
+            type="text"
+            placeholder="10-digit moblie number"
+          />
+          <!-- <span
+            class="invalid-form"
+          >
+            <small
+              class="form-text text-muted danger"
+              >This field is required!</small
+            >
+          </span> -->
+        </div>
+      </div>
+      <div class="col-lg-12 mx-auto">
+        <div class="form-group input-login">
+          <label class="form-control-label pb-1" for="TDName">Email</label>
+          <input
+            class="form-control form-control-lg"
+            required
+            id="TDEmail"
+            formControlName="email"
+            type="email"
+            placeholder="Email"
+          />
+          <!-- <span
+            class="invalid-form"
+          >
+            <small
+              class="form-text text-muted danger"
+              >This field is required!</small
+            >
+          </span> -->
+        </div>
+      </div>
+      <div class="col-lg-12 mx-auto">
+        <div class="form-group input-login">
+          <label class="form-control-label pb-1" for="TDPassword"
+            >Password</label
+          >
+          <input
+            class="form-control form-control-lg"
+            required
+            password
+            id="TDPassword"
+            formControlName="password"
+            type="password"
+            placeholder="Password"
+          />
+          <!-- <span *ngIf="TDSimpleForm.submitted" class="invalid-form">
+            <small class="form-text text-muted danger" *ngIf="!TDPasswordRef.valid"
+              >email must be valid!</small
+            >
+          </span> -->
+        </div>
+      </div>
+      <div class="mx-auto">
+        <div class="form-group input-login">
+          <label class="form-control-label pb-2" for="TDPassword"
+            >Gender (Opitonal)</label
+          >
+          <div class="row">
+            <div class="col-3">
+              <button
+                type="button"
+                class="login-form-button btn-primary btn-block btn-gender"
+                (click)="selectGender('Male')"
+                [class.active]="RegisterForm.get('gender')?.value === 'Male'"
+              >
+                <span>Male</span>
+              </button>
+            </div>
+            <div class="col-3">
+              <button
+                type="button"
+                class="login-form-button btn-primary btn-block btn-gender"
+                (click)="selectGender('Female')"
+                [class.active]="RegisterForm.get('gender')?.value === 'Female'"
+              >
+                <span>Female</span>
+              </button>
+            </div>
+            <div class="col-6">
+              <button
+                type="button"
+                class="login-form-button btn-primary btn-block btn-gender"
+                (click)="selectGender('Not Specified')"
+                [class.active]="
+                  RegisterForm.get('gender')?.value === 'Not Specified'
+                "
+              >
+                <span>Not Specified</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-12 mx-auto">
+        <div class="form-group input-login">
+          <label class="form-control-label pb-1" for="birthday"
+            >Your birthday present is waiting</label
+          >
+        </div>
+        <input type="date" formControlName="birthday" id="birthday" />
+      </div>
+
+      <div class="custom-control custom-checkbox pt-2">
+        <input
+          type="checkbox"
+          class="custom-control-input"
+          id="customCheck1"
+          [checked]="RegisterForm.get('customCheck1')?.value"
+          (change)="toggleCustomCheck('customCheck1')"
+        />
+        <span>
+          I have read and accepted the
+          <a href="#">terms &amp; conditions</a> and
+          <a href="#">privacy policy</a> of Swensen’s.
+        </span>
+      </div>
+      <div class="custom-control custom-checkbox pt-2">
+        <input
+          type="checkbox"
+          class="custom-control-input"
+          id="customCheck2"
+          [checked]="RegisterForm.get('customCheck2')?.value"
+          (change)="toggleCustomCheck('customCheck2')"
+        />
+        <span>
+          I agree to receive the information including other marketing
+          activities from Swensen’s and
+          <a href="#">affiliated companies</a>. We will keep your data
+          confidential. Learn more about <a href="#">privacy policy</a> from
+          company’s website.
+        </span>
+      </div>
+    </div>
+    <button
+      type="submit"
+      class="login-form-button btn btn-primary btn-block btn-login"
+      [disabled]="!RegisterForm.valid || !RegisterForm.get('customCheck1')?.value || !RegisterForm.get('customCheck2')?.value"
+      >
+      <span>Register</span>
+    </button>
+  </form>
+</div>
+
+<app-footer></app-footer>

@@ -1,0 +1,164 @@
+<div class="content">
+  <div class="banner-1">
+    <img
+      src="https://firebasestorage.googleapis.com/v0/b/swensens-production.appspot.com/o/banner%2Fsw-banner.jpg?alt=media"
+      alt=""
+    />
+  </div>
+  <div class="banner-filter filter-section">
+    <div class="words-filter container-words">
+      <a (click)="setFilter('')"
+        ><p [ngClass]="{ active: filterType === '' }">All</p></a
+      >
+    </div>
+    <div class="words-filter container-words">
+      <a (click)="setFilter('3')"
+        ><p [ngClass]="{ active: filterType === '3' }">Ice Cream - Cake</p></a
+      >
+    </div>
+    <div class="words-filter container-words">
+      <a (click)="setFilter('1')"
+        ><p [ngClass]="{ active: filterType === '1' }">
+          Ice Cream Quart (450g)
+        </p></a
+      >
+    </div>
+    <div class="words-filter container-words">
+      <a (click)="setFilter('2')"
+        ><p [ngClass]="{ active: filterType === '2' }">
+          Ice Cream Mini Quart (250g)
+        </p></a
+      >
+    </div>
+    <div class="words-filter container-words">
+      <a (click)="setFilter('4')"
+        ><p [ngClass]="{ active: filterType === '4' }">
+          Ice Cream Bar
+        </p></a
+      >
+    </div>
+    <div class="words-filter container-words">
+      <a (click)="setFilter('5')"
+        ><p [ngClass]="{ active: filterType === '5' }">
+          Topping
+        </p></a
+      >
+    </div>
+  </div>
+  <div class="banner-2">
+    <div class="container-2">
+      <div class="item-product" *ngIf="quartData && quartData.length > 0">
+        <h2 class="banner-content-2 heading">Ice Cream Quart (450g)</h2>
+        <div class="image-carousel">
+          <div *ngFor="let item of quartData">
+            <div class="card-product-item">
+              <img
+                *ngIf="item.image"
+                class="card-img-top"
+                [src]="item.image"
+                alt="Product Image"
+              />
+              <div class="card-body-item">
+                <h5 class="card-title">{{ item.name }}</h5>
+                <h5 class="card-price">{{ item.price }} Baht</h5>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="item-product" *ngIf="mQuartData && mQuartData.length > 0">
+        <h2 class="banner-content-2 heading">Ice Cream Mini Quart (250g)</h2>
+        <div class="image-carousel">
+          <div *ngFor="let item of mQuartData">
+            <div class="card-product-item">
+              <img
+                *ngIf="item.image"
+                class="card-img-top"
+                [src]="item.image"
+                alt="Product Image"
+              />
+              <div class="card-body-item">
+                <h5 class="card-title">{{ item.name }}</h5>
+                <h5 class="card-price">{{ item.price }} Baht</h5>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="item-product" *ngIf="cakeData && cakeData.length > 0">
+        <h2 class="banner-content-2 heading">Ice Cream - Cake</h2>
+        <div class="image-carousel">
+          <div *ngFor="let item of cakeData">
+            <div class="card-product-item">
+              <img
+                class="card-img-top"
+                [src]="item.image"
+                alt="Card image cap"
+              />
+              <div class="card-body-item">
+                <h5 class="card-title">{{ item.name }}</h5>
+                <h5 class="card-price">{{ item.price }} Baht</h5>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="item-product" *ngIf="barData && barData.length > 0">
+        <h2 class="banner-content-2 heading">Ice Cream Bar</h2>
+        <div class="image-carousel">
+          <div *ngFor="let item of barData">
+            <div class="card-product-item">
+              <img
+                class="card-img-top"
+                [src]="item.image"
+                alt="Card image cap"
+              />
+              <div class="card-body-item">
+                <h5 class="card-title">{{ item.name }}</h5>
+                <h5 class="card-price">{{ item.price }} Baht</h5>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="banner-footer">
+    <div class="container-footer">
+      <div class="mobile-img">
+        <img
+          src="https://swensens1112.com/images/app-screen-webp.webp"
+          alt=""
+        />
+      </div>
+      <div class="app-button">
+        <div class="container-button">
+          <h2 class="heading">Download on</h2>
+          <div class="download-button">
+            <div class="download-item">
+              <div class="item">
+                <a
+                  href="https://play.google.com/store/apps/details?id=com.swensens1112.swensens"
+                  target="_blank"
+                  ><img
+                    src="	https://swensens1112.com/images/google-play.png"
+                    alt=""
+                /></a>
+              </div>
+              <div class="item">
+                <a
+                  href="https://apps.apple.com/th/app/swensens/id1553427962"
+                  target="_blank"
+                  ><img
+                    src="https://swensens1112.com/images/app-store.png"
+                    alt=""
+                /></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <app-footer></app-footer>
+</div>

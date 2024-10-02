@@ -1,0 +1,106 @@
+
+.content-login {
+  max-width: 480px;
+  max-height: 600px;
+  margin: 0 auto;
+  overflow: hidden;
+  border-radius: 10px;
+  background-color: #fff;
+  margin-bottom: 50px;
+  margin-top: 50px;
+  flex: 1;
+}
+
+.page-container {
+  min-height: 100vh; /* Take up at least the full viewport height */
+  display: flex;
+  flex-direction: column;
+}
+
+
+.content-form {
+  max-width: 480px;
+  max-height: 100%;
+  margin: 0 auto;
+  overflow: hidden;
+  border-radius: 10px;
+  background-color: #fff;
+
+}
+
+* {
+  font-family: "Kanit",sans-serif !important;
+  font-variant: tabular-nums !important;
+}
+
+.content-login .box-header {
+  color: #fff;
+  height: 240px;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  background-color: #dbdbdb;
+  background-size: cover;
+  background-position: top;
+  background-image: url("https://swensens1112.com/images/card-head.png")
+}
+
+.content-login .form-login {
+padding: 40px;
+}
+
+.btn-primary {
+  width: 100%;
+  color: #fff;
+  background-color: #e21c23;
+  border-color: #e21c23;
+  text-shadow: 0 -1px 0 rgba(0,0,0,.12);
+  box-shadow: 0 2px 0 rgba(0,0,0,.045);
+}
+
+.btn {
+  line-height: 1.499;
+  position: relative;
+  display: inline-block;
+  font-weight: 300;
+  white-space: nowrap;
+  text-align: center;
+  box-shadow: 0 2px 0 rgba(0,0,0,.015);
+  cursor: pointer;
+  transition: all .3s cubic-bezier(.645,.045,.355,1);
+  height: 48px;
+  padding: 0 15px;
+  font-size: 14px;
+  border-radius: 50px;
+  color: white;
+  background-color: #e21c23 !important;
+  border: 1px solid #e21c23;
+}
+
+.form-control::placeholder {
+  font-size: 12px; /* Adjust the font size as per your preference */
+}
+
+/* Optionally, if you want to set a different color for the placeholder */
+.form-control::placeholder {
+  color: #999; /* Adjust the color as per your preference */
+}
+
+.input-login {
+  margin-top: 20px;
+}
+
+.btn-login {
+  margin-top: 40px;
+}
+
+.form-control-label {
+  font-size: 12px;
+}
+
+app-footer {
+  margin-top: auto;
+}
+

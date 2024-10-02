@@ -1,1 +1,19 @@
 /* You can add global styles to this file, and also import other style files */
+@import '~bootstrap/dist/css/bootstrap.min.css';
+
+
+body{
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #787878;
+  font-family: "Kanit",sans-serif;
+  font-variant: tabular-nums;
+  background-color: #f4f4f4;
+  height: 100vh;
+}
+
+app-root {
+  height: 100%;
+
+}

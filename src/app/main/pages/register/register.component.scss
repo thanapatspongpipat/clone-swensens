@@ -1,0 +1,192 @@
+.content-login {
+  max-width: 480px;
+  margin: 50px auto;
+  border-radius: 10px;
+  background-color: #fff;
+  overflow: auto;
+}
+
+.content-login .box-header {
+  color: #fff;
+  height: 240px;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  background-color: #dbdbdb;
+  background-size: cover;
+  background-position: top;
+  background-image: url("https://swensens1112.com/images/card-head.png");
+}
+
+.content-login .form-login {
+  padding: 40px;
+}
+
+.btn-primary {
+  width: 100%;
+  color: #fff;
+  background-color: #e21c23;
+  border-color: #e21c23;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.12);
+  box-shadow: 0 2px 0 rgba(0, 0, 0, 0.045);
+}
+
+.btn {
+  line-height: 1.499;
+  position: relative;
+  display: inline-block;
+  font-weight: 300;
+  white-space: nowrap;
+  text-align: center;
+  box-shadow: 0 2px 0 rgba(0, 0, 0, 0.015);
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+  height: 48px;
+  padding: 0 15px;
+  font-size: 14px;
+  border-radius: 50px;
+  color: white;
+  background-color: #e21c23;
+  border: 1px solid #e21c23;
+}
+
+.form-control::placeholder {
+  font-size: 12px; /* Adjust the font size as per your preference */
+}
+
+/* Optionally, if you want to set a different color for the placeholder */
+.form-control::placeholder {
+  color: #999; /* Adjust the color as per your preference */
+}
+
+.input-login {
+  margin-top: 20px;
+}
+
+.btn-login {
+  margin-top: 40px;
+}
+
+.form-control-label {
+  font-size: 12px;
+}
+
+.btn-gender {
+  line-height: 1.499;
+  position: relative;
+  display: inline-block;
+  font-weight: 300;
+  white-space: nowrap;
+  text-align: center;
+  box-shadow: 0 2px 0 rgba(0, 0, 0, 0.015);
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+  height: 48px;
+  padding: 0 15px;
+  font-size: 14px;
+  border-radius: 50px;
+  color: #e21c23;
+  background-color: white;
+  border: 1px solid #e21c23;
+}
+
+input[type="date"] {
+  box-sizing: border-box;
+  margin: 0;
+  font-variant: tabular-nums;
+  list-style: none;
+  font-feature-settings: "tnum", "tnum";
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  height: 48px;
+  padding: 4px 11px;
+  color: #787878;
+  font-size: 14px;
+  line-height: 1.5;
+  background-color: #fff;
+  background-image: none;
+  border: 1px solid #d2d2d2;
+  border-radius: 10px;
+  transition: all 0.3s;
+}
+
+.form-item {
+  box-sizing: border-box;
+  padding: 0;
+  color: #787878;
+  font-size: 14px;
+  font-variant: tabular-nums;
+  line-height: 1.5;
+  list-style: none;
+  font-feature-settings: "tnum", "tnum";
+  margin: 0 0 24px;
+  vertical-align: top;
+}
+
+.custom-checkbox {
+  margin-top: 15px;
+}
+
+.custom-control-input:checked ~ .custom-control-label::before {
+  border-color: #f00;
+}
+
+a {
+  color: #f00;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.custom-control {
+  margin-bottom: 10px;
+}
+
+.custom-control span {
+  color: #000;
+}
+
+.ant-checkbox-checked:after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* border: 1px solid #e21c23; */
+  border-radius: 2px;
+  visibility: hidden;
+  -webkit-animation: antCheckboxEffect .36s ease-in-out;
+  animation: antCheckboxEffect .36s ease-in-out;
+  -webkit-animation-fill-mode: backwards;
+  animation-fill-mode: backwards;
+  content: "";
+}
+
+input[type=checkbox] {
+  accent-color: red;
+}
+
+* {
+  font-family: "Kanit",sans-serif !important;
+  font-variant: tabular-nums !important;
+}
+
+app-footer {
+  margin-top: 20px;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: auto; /* Adjust the height according to your footer's content */
+  background-color: #333;
+  color: #fff;
+}
+
+.login-form-button.active {
+  background-color: #e21c23; /* Replace with the desired background color */
+  color: #ffffff; /* Replace with the desired text color */
+}

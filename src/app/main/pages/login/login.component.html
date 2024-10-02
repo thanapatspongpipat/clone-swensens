@@ -1,0 +1,51 @@
+<div class="page-container">
+  <div class="content-login">
+    <div class="box-header">
+      <div class="content">
+        <h2>Welcome</h2>
+        <p>Login to begin journey</p>
+      </div>
+    </div>
+    <form
+      class="form-horizontal form-login"
+      [formGroup]="LoginForm"
+      (ngSubmit)="submitLogin()"
+    >
+      <div class="row">
+        <div class="col-lg-12 mx-auto">
+          <div class="form-group input-login">
+            <label class="form-control-label pb-1" for="TDName">Email</label>
+            <input
+              class="form-control form-control-lg "
+              required
+              id="TDEmail"
+              formControlName="email"
+              type="email"
+              placeholder="Email"
+            />
+          </div>
+        </div>
+        <div class="col-lg-12 mx-auto">
+          <div class="form-group input-login">
+            <label class="form-control-label pb-1" for="TDPassword">Password</label>
+            <input
+              class="form-control form-control-lg"
+              required
+              password
+              formControlName="password"
+              type="password"
+              placeholder="Password"
+            />
+          </div>
+        </div>
+      </div>
+      <button type="submit" class="login-form-button btn btn-primary btn-block btn-login" [disabled]="!LoginForm.valid">
+        <span>Login</span>
+      </button>
+    </form>
+  </div>
+  <app-footer></app-footer>
+</div>
+
+
+
